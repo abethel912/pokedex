@@ -15,13 +15,15 @@ app.use(express.urlencoded({ extended: true }))
 // })
 
 // INDEX
-app.get('/', (req, res) => {
+app.get('/pokemon', (req, res) => {
+  console.log(Pokemon.every(p => p.stats.hp))
 res.render('index.ejs', { data: Pokemon });
 });
 
 // New - GET /pokemon/new
-
-
+app.get('/pokemon/new', (req, res) => {
+  res.render('new.ejs')
+})
 
 
 // Create-POST /pokemon

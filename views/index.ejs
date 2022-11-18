@@ -10,9 +10,21 @@
 
   <div class="container">
     <h1>Pokedex</h1>
-
-   
-
+    <% for(let i=0; i < data.length; i++){%>
+    <h2><%=data[i].name %></h2>
+    <img src="<%=data[i].img %>" alt="" />
+      <ul> 
+      <% const type=data[i].type %>
+      <% for(let j=0; j < type.length; j++){ %>
+      <li><a href="/pokemon/"></a>
+        <%= type[j] %>
+      </li>
+         <% } %>
+      </ul>
+    <p><%=data[i].stats.hp %></p>
+    <p><%=data[i].stats.attack %></p>
+    <p><%=data[i].stats.defense %></p>
+      <%}%>
     </div>
   
 </body>

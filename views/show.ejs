@@ -7,12 +7,17 @@
   <title>Show Page</title>
 </head>
 <body>
-  <h1>Name: <%=data.name %></h1>
-  <h2><img src="<%=data.img%>" alt="">
-  <ul><li><%=data.type %></li></ul>
+  <div class="container">
+    <h2><%=data.name %></h2>
+    <img src="<%=data.img %>" alt="" />
+  <ul>
+    <% const type = data.type %> <% for(let j = 0; j < type.length; j++){ %>
+    <li><%=type[j] %></li>
+  <% } %>
+  </ul>
   <p>HP: <%=data.stats.hp %></p>
   <p>Attack: <%=data.stats.attack %></p>
   <p>Defense: <%=data.stats.defense %></p>
-
+</div>
 </body>
 </html>
