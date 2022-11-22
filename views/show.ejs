@@ -5,12 +5,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Show Page</title>
-  <link rel="stylesheet" href="/public/style.css">
+  <link rel="stylesheet" href="/public/show.css">
 </head>
 <body>
-  <div class="container">
     <h2><%=data.name %></h2>
+    <div class="pokemon-container" id="pokemon-container"></div>
+    <div class="pokemon">
+    <div class="img-container"></div>
     <img src="<%=data.img %>" alt="" />
+    <div class="info">
   <ul>
     <% const type = data.type %> <% for(let j = 0; j < type.length; j++){ %>
     <li><%=type[j] %></li>
@@ -19,6 +22,7 @@
   <p>HP: <%=data.stats.hp %></p>
   <p>Attack: <%=data.stats.attack %></p>
   <p>Defense: <%=data.stats.defense %></p>
+  </div>
 </div>
 </body>
 </html>
