@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pokedex</title>
- <link rel="stylesheet" href="/public/index.css">
+  <link rel="stylesheet" href="/public/index.css">
 </head>
 <body>
     <h1>Pokedex</h1>
@@ -15,6 +15,7 @@
     <h2><%=data[i].name %></h2>
     <img src="<%=data[i].img %>" alt="" />
       <ul> 
+        
       <% const type=data[i].type %>
       <% for(let j=0; j < type.length; j++){ %>
       <li><a href="/pokemon/"></a>
